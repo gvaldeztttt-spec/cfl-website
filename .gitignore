@@ -1,0 +1,10 @@
+.DS_Store
+.vscode/
+.pydeps/
+.tools/
+node_modules/
+.env
+.env.*
+.netlify/
+.vercel/
+*.log

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#070707" />
+  <meta name="description" content="CFL Santo Domingo Premiere tickets — coming soon. October 24, 2026, Palacio de los Deportes." />
+  <title>Tickets | CFL Continental Fight League</title>
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    document.documentElement.lang = localStorage.getItem("cfl-lang") || "en";
+  </script>
+</head>
+<body class="page-tickets">
+  <a class="skip-link" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+  <div class="utility-bar">
+    <div class="utility-inner">
+      <div class="utility-links">
+        <a href="tickets.html" aria-current="page" data-i18n="buy_tickets">Comprar boletos</a>
+        <a href="index.html#registro" data-i18n="alerts">Alertas</a>
+      </div>
+      <div class="utility-tools">
+        <div class="lang-switch" role="group" data-i18n-aria="lang_label" aria-label="Idioma">
+          <button type="button" data-lang="es" aria-pressed="false">ES</button>
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        </div>
+        <div class="utility-social" data-i18n-aria="socials" aria-label="Redes sociales">
+          <a href="https://www.instagram.com/cfldr" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header is-page" id="top">
+    <a class="brand" href="index.html" data-i18n-aria="brand_home" aria-label="CFL, inicio">
+      <img src="assets/cfl-logo-white.png" alt="Continental Fight League" />
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span></span><span></span><span></span>
+      <span class="sr-only" data-i18n="open_menu">Abrir menú</span>
+    </button>
+
+    <nav class="primary-nav" id="primary-nav" data-i18n-aria="nav_main" aria-label="Navegación principal">
+      <a href="index.html" data-i18n="nav_home">Inicio</a>
+      <a href="index.html#nosotros" data-i18n="nav_about">Nosotros</a>
+      <a href="index.html#evento" data-i18n="nav_events">Eventos</a>
+      <a href="index.html#talento" data-i18n="nav_fighters">Atletas</a>
+      <a href="index.html#noticias" data-i18n="nav_news">Noticias</a>
+      <a href="index.html#partners" data-i18n="nav_partners">Partners</a>
+      <a href="tickets.html" aria-current="page" data-i18n="nav_tickets">Boletos</a>
+    </nav>
+
+    <a class="header-cta" href="tickets.html" data-i18n="buy_tickets">Comprar boletos</a>
+  </header>
+
+  <main id="main" class="tickets-main">
+    <section class="tickets-hero">
+      <div class="tickets-hero-bg" style="--hero-image: url('assets/thomas-blumenfeld-venue.png');"></div>
+      <div class="tickets-hero-shade"></div>
+      <div class="tickets-panel reveal is-visible">
+        <p class="eyebrow" data-i18n="tickets_eyebrow">CFL Santo Domingo premiere</p>
+        <h1 data-i18n-html="tickets_title">Boletos<br /><span>próximamente</span></h1>
+        <p class="tickets-copy" data-i18n="tickets_copy">La venta oficial aún no está abierta. Regístrate para recibir acceso prioritario cuando salgan a la venta.</p>
+
+        <dl class="tickets-meta">
+          <div>
+            <dt data-i18n="tickets_date_label">Fecha</dt>
+            <dd data-i18n="tickets_date_value">24 octubre 2026 · 7:00 pm AST</dd>
+          </div>
+          <div>
+            <dt data-i18n="tickets_venue_label">Venue</dt>
+            <dd data-i18n="tickets_venue_value">Palacio de los Deportes, Santo Domingo</dd>
+          </div>
+        </dl>
+
+        <div class="hero-countdown tickets-countdown" data-countdown data-date="2026-10-24T19:00:00-04:00" data-i18n-aria="countdown" aria-label="Cuenta regresiva">
+          <div><strong data-days>00</strong><span data-i18n="days">días</span></div>
+          <div><strong data-hours>00</strong><span data-i18n="hours">hrs</span></div>
+          <div><strong data-minutes>00</strong><span data-i18n="minutes">min</span></div>
+          <div><strong data-seconds>00</strong><span data-i18n="seconds">seg</span></div>
+        </div>
+
+        <form class="signup-form tickets-form" action="#" method="post">
+          <label>
+            <span class="sr-only" data-i18n="name">Nombre</span>
+            <input type="text" name="name" data-i18n-placeholder="name" placeholder="Nombre" autocomplete="name" />
+          </label>
+          <label>
+            <span class="sr-only" data-i18n="email">Correo electrónico</span>
+            <input type="email" name="email" data-i18n-placeholder="email" placeholder="Correo electrónico" autocomplete="email" required />
+          </label>
+          <button type="submit"><span data-i18n="tickets_notify">Avísame</span> <span>→</span></button>
+          <p data-i18n="tickets_note">Te avisaremos cuando los boletos estén disponibles. Formulario de demostración.</p>
+        </form>
+
+        <div class="tickets-actions">
+          <a class="button button-ghost" href="index.html#evento" data-i18n="tickets_view_event">Ver evento</a>
+          <a class="text-link" href="https://www.instagram.com/cfldr" target="_blank" rel="noopener noreferrer"><span data-i18n="tickets_ig">Síguenos en Instagram</span> <span>→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img src="assets/cfl-logo-white.png" alt="Continental Fight League" />
+      <p data-i18n="footer_tagline">Boxeo. MMA. Cultura. República Dominicana.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/cfldr" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-nav">
+      <div>
+        <h2 data-i18n="footer_explore">Explora</h2>
+        <a href="index.html#evento" data-i18n="nav_events">Eventos</a>
+        <a href="index.html#talento" data-i18n="nav_fighters">Atletas</a>
+        <a href="index.html#noticias" data-i18n="nav_news">Noticias</a>
+        <a href="index.html#partners" data-i18n="nav_partners">Partners</a>
+      </div>
+      <div>
+        <h2>CFL</h2>
+        <a href="index.html#nosotros" data-i18n="nav_about">Nosotros</a>
+        <a href="tickets.html" data-i18n="nav_tickets">Boletos</a>
+        <a href="https://www.instagram.com/cfldr" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Continental Fight League</span>
+      <a href="#top" data-i18n="back_top">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
