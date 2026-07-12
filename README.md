@@ -11,38 +11,38 @@ python3 -m http.server 8765
 
 Open http://127.0.0.1:8765
 
-## Deploy (Netlify)
+## Deploy (Vercel)
 
-1. Create a free account at [netlify.com](https://www.netlify.com/)
-2. Drag the `CFL Website` folder onto **Sites → Add new site → Deploy manually**,  
-   or from Terminal:
+1. Create a free account at [vercel.com](https://vercel.com/)
+2. Import the GitHub repo `gvaldeztttt-spec/cfl-website`, or deploy from Terminal:
 
 ```bash
 cd "/Users/gian/Desktop/CFL Website"
-npx netlify-cli login
-npx netlify-cli deploy --dir=. --prod
+npx vercel login
+npx vercel --prod
 ```
 
-3. Netlify gives you a URL like `https://something.netlify.app` — confirm the site looks right.
+3. Framework preset: **Other** · Build command: leave empty · Output directory: `.` (or leave default for static)
 
 ## Connect continentalfightleague.com
 
 Domain registrar: **Squarespace Domains**.
 
-1. In Netlify: **Domain management → Add domain** → `continentalfightleague.com`
-2. Follow Netlify’s DNS instructions (they show exact records).
-3. In Squarespace: **Domains → continentalfightleague.com → DNS settings**
-4. Replace the current Squarespace website A / CNAME records with Netlify’s values (typical pattern):
+**Important:** nameservers must be Squarespace’s defaults first (not Netlify’s `dns*.p01.nsone.net`), or your DNS edits won’t apply.
+
+1. In Squarespace Domains → **Nameservers** → use **Squarespace defaults**
+2. In Vercel → Project → **Settings → Domains** → add `continentalfightleague.com` (and `www`)
+3. In Squarespace → **DNS settings**, set:
 
 | Type | Host | Value |
 |------|------|--------|
-| A | `@` | Netlify load balancer IP (from Netlify panel) |
-| CNAME | `www` | `your-site-name.netlify.app` |
+| A | `@` | `76.76.21.21` |
+| CNAME | `www` | `cname.vercel-dns.com` |
 
-Or point nameservers to Netlify if you prefer Netlify DNS.
+(Use the exact values Vercel shows if they differ.)
 
-5. Wait for DNS (often 15–60 minutes; up to 48 hours).
-6. In Squarespace, unpublish or delete the old site so it doesn’t conflict.
+4. Keep existing **MX / email TXT** records so email keeps working.
+5. Wait for DNS + SSL (often minutes; up to 48 hours).
 
 ## After go-live checklist
 

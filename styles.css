@@ -331,11 +331,29 @@ button { color: inherit; }
  max-width: none;
  padding-inline: max(clamp(1.25rem, 4vw, 4rem), calc((100vw - var(--max)) / 2 + 4rem));
 }
-.roster .section-heading, .roster .fighter-grid { max-width: calc(var(--max) - 8rem); margin-inline: auto; }
+.roster .section-heading,
+.roster .roster-group { max-width: calc(var(--max) - 8rem); margin-inline: auto; }
+.roster-group + .roster-group { margin-top: clamp(3rem, 6vw, 5rem); }
+.roster-group-title {
+  margin: 0 0 1.1rem;
+  font-family: var(--display);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  line-height: 1;
+  letter-spacing: .02em;
+  color: var(--gold-bright);
+}
 .fighter-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
+}
+.fighter-grid-boxing {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.fighter-grid-boxing .fighter-card-large {
+  grid-column: 1;
+  grid-row: auto;
+  min-height: 520px;
 }
 .fighter-card {
   position: relative;
@@ -569,6 +587,173 @@ a.partner-card:hover {
  margin-bottom: 1.5rem;
 }
 .tickets-form { margin-bottom: 1.5rem; }
+.page-fighter .utility-bar { position: sticky; top: 0; }
+.fighter-main { padding-bottom: 4rem; }
+.fighter-profile {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.95fr) minmax(320px, 1.05fr);
+  gap: 0;
+  min-height: calc(100svh - var(--utility-h) - var(--header-h));
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(217,154,5,.14), transparent 45%),
+    linear-gradient(160deg, #0a0a0b 0%, #050505 55%, #12100a 100%);
+}
+.fighter-profile-media {
+  position: relative;
+  min-height: 560px;
+  overflow: hidden;
+  border-right: 1px solid var(--line);
+}
+.fighter-profile-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.fighter-profile-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 55%, rgba(5,5,5,.55)),
+    linear-gradient(0deg, rgba(5,5,5,.75), transparent 40%);
+}
+.fighter-profile-record {
+  position: absolute;
+  left: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 2;
+  font-family: var(--display);
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  line-height: .9;
+  letter-spacing: .02em;
+  color: var(--gold-bright);
+  text-shadow: 0 8px 30px rgba(0,0,0,.55);
+}
+.fighter-profile-body {
+  padding: clamp(2rem, 5vw, 4.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.fighter-profile-tag {
+  margin: .35rem 0 0;
+  color: var(--gold);
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: none;
+  font-size: .85rem;
+}
+.fighter-profile-body h1 {
+  margin: .55rem 0 0;
+  font-family: var(--display);
+  font-size: clamp(2.6rem, 6vw, 4.6rem);
+  line-height: .92;
+  letter-spacing: .01em;
+  max-width: 12ch;
+}
+.fighter-profile-nick {
+  margin: .7rem 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+.fighter-profile-bio {
+  margin: 1.25rem 0 0;
+  color: rgba(247,245,239,.82);
+  max-width: 38rem;
+  font-size: 1.05rem;
+}
+.fighter-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem 1.25rem;
+  margin: 2rem 0 0;
+  padding: 1.35rem 0 0;
+  border-top: 1px solid var(--line);
+}
+.fighter-stats div { min-width: 0; }
+.fighter-stats dt {
+  margin: 0;
+  color: var(--muted);
+  font-size: .68rem;
+  letter-spacing: .08em;
+  font-weight: 700;
+}
+.fighter-stats dd {
+  margin: .35rem 0 0;
+  font-weight: 800;
+  font-size: .98rem;
+}
+.fighter-profile-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .9rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+.fighter-history { padding-top: 1rem; }
+.fighter-history-list {
+  display: grid;
+  gap: .75rem;
+}
+.fighter-history-actions {
+  margin-top: 1.75rem;
+  padding-top: .5rem;
+}
+.fighter-fight {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem 1.25rem;
+  align-items: center;
+  padding: 1.1rem 1.25rem;
+  border-top: 1px solid var(--line);
+  background: linear-gradient(90deg, rgba(217,154,5,.06), transparent 40%);
+}
+.fighter-fight-result {
+  font-family: var(--display);
+  font-size: 1.55rem;
+  line-height: 1;
+  min-width: 2.2rem;
+  color: var(--white);
+}
+.fighter-fight-result.is-w { color: var(--gold-bright); }
+.fighter-fight-result.is-l { color: #c45b5b; }
+.fighter-fight-result.is-nc { color: var(--muted); }
+.fighter-fight-copy h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+.fighter-fight-copy p {
+  margin: .2rem 0 0;
+  color: var(--muted);
+  font-size: .88rem;
+}
+.fighter-fight-meta {
+  text-align: right;
+  display: grid;
+  gap: .2rem;
+}
+.fighter-fight-meta strong { font-size: .92rem; }
+.fighter-fight-meta span { color: var(--muted); font-size: .78rem; }
+.fighter-missing {
+  min-height: 70svh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+.fighter-missing[hidden],
+.fighter-profile[hidden],
+.fighter-history[hidden] {
+  display: none !important;
+}
+.fighter-missing h1 {
+  font-family: var(--display);
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  margin: .5rem 0 1rem;
+}
+
 .tickets-actions {
  display: flex;
  flex-wrap: wrap;
@@ -700,6 +885,8 @@ a.partner-card:hover {
  .hero-countdown { left: 1.25rem; right: 1.25rem; bottom: 5.6rem; justify-content: space-between; }
  .slider-controls { left: 1.25rem; right: auto; bottom: 1.4rem; }
  .fighter-grid, .media-gallery { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+ .fighter-grid-boxing { grid-template-columns: 1fr 1fr; }
+ .fighter-grid-boxing .fighter-card-large { min-height: 430px; }
  .fighter-card-large, .media-item-wide { grid-column: auto; grid-row: auto; min-height: 480px; }
  .fighter-card { min-height: 430px; }
  .brand-story { grid-template-columns: 1fr; padding-block: 5rem; }
@@ -709,6 +896,20 @@ a.partner-card:hover {
  .media-item-wide, .media-item { min-height: 420px; }
  .signup-form { grid-template-columns: 1fr; }
  .signup-form p { grid-column: auto; }
+ .fighter-profile { grid-template-columns: 1fr; min-height: 0; }
+ .fighter-profile-media {
+   min-height: 420px;
+   border-right: 0;
+   border-bottom: 1px solid var(--line);
+ }
+ .fighter-stats { grid-template-columns: 1fr 1fr; }
+ .fighter-fight {
+   grid-template-columns: auto 1fr;
+ }
+ .fighter-fight-meta {
+   grid-column: 2;
+   text-align: left;
+ }
  .site-footer { grid-template-columns: 1fr; }
  .partners-row { grid-template-columns: 1fr; max-width: 420px; }
 }
