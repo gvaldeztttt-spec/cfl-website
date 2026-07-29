@@ -188,7 +188,7 @@ window.CFL_FIGHTERS = {
     sport: { es: "MMA", en: "MMA" },
     country: { es: "Brasil", en: "Brazil" },
     based: { es: "Criciúma, Santa Catarina, Brasil", en: "Criciúma, Santa Catarina, Brazil" },
-    image: "assets/wellington-benvenuti.png",
+    image: "assets/wellington-benvenuti.png?v=4",
     record: "7-4-0",
     division: { es: "Peso pluma", en: "Featherweight" },
     height: "5′7″ / 170 cm",
