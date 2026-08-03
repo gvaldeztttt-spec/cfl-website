@@ -847,10 +847,13 @@ a.partner-card:hover {
 }
 .cfl-box-lead {
   margin: 1.2rem 0 0;
-  max-width: 36rem;
+  max-width: 38rem;
   color: rgba(247,245,239,.82);
-  font-size: 1.05rem;
+  font-size: 1.02rem;
+  display: grid;
+  gap: .85rem;
 }
+.cfl-box-lead p { margin: 0; }
 .cfl-box-hero-actions {
   display: flex;
   flex-wrap: wrap;
