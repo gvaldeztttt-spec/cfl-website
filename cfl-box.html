@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#070707" />
+  <meta name="description" content="CFL Box — Dominican professional boxing championship pipeline for 2027." />
+  <title>CFL Box | CFL Continental Fight League</title>
+  <link rel="icon" href="assets/favicon.png?v=5" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=5" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    document.documentElement.lang = localStorage.getItem("cfl-lang") || "en";
+  </script>
+</head>
+<body class="page-cfl-box">
+  <a class="skip-link" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+  <div class="utility-bar">
+    <div class="utility-inner">
+      <div class="utility-links">
+        <a href="tickets.html" data-i18n="buy_tickets">Comprar boletos</a>
+        <a href="index.html#registro" data-i18n="alerts">Alertas</a>
+      </div>
+      <div class="utility-tools">
+        <div class="lang-switch" role="group" data-i18n-aria="lang_label" aria-label="Idioma">
+          <button type="button" data-lang="es" aria-pressed="false">ES</button>
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        </div>
+        <div class="utility-social" data-i18n-aria="socials" aria-label="Redes sociales">
+          <a href="https://www.instagram.com/cfldr" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header is-page" id="top">
+    <a class="brand" href="index.html" data-i18n-aria="brand_home" aria-label="CFL, inicio">
+      <img src="assets/cfl-logo-white.png" alt="Continental Fight League" />
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span></span><span></span><span></span>
+      <span class="sr-only" data-i18n="open_menu">Abrir menú</span>
+    </button>
+
+    <nav class="primary-nav" id="primary-nav" data-i18n-aria="nav_main" aria-label="Navegación principal">
+      <a href="index.html" data-i18n="nav_home">Inicio</a>
+      <a href="index.html#nosotros" data-i18n="nav_about">Nosotros</a>
+      <a href="index.html#evento" data-i18n="nav_events">Eventos</a>
+      <a href="index.html#talento" data-i18n="nav_fighters">Atletas</a>
+      <a href="cfl-box.html" aria-current="page" data-i18n="nav_cfl_box">CFL Box</a>
+      <a href="index.html#noticias" data-i18n="nav_news">Noticias</a>
+      <a href="index.html#partners" data-i18n="nav_partners">Partners</a>
+      <a href="tickets.html" data-i18n="nav_tickets">Boletos</a>
+    </nav>
+
+    <a class="header-cta" href="#inscripcion" data-i18n="cfl_box_cta_apply">Inscribirme</a>
+  </header>
+
+  <main id="main" class="cfl-box-main">
+    <section class="cfl-box-hero section">
+      <div class="cfl-box-hero-copy reveal">
+        <p class="eyebrow" data-i18n="cfl_box_eyebrow">Convocatoria nacional 2027</p>
+        <h1 data-i18n="cfl_box_title">CFL Box</h1>
+        <p class="cfl-box-lead" data-i18n="cfl_box_lead">Pipeline de talento para coronar a los mejores boxeadores profesionales de República Dominicana y proyectarlos hacia CFL Pro y el más alto nivel.</p>
+        <div class="cfl-box-hero-actions">
+          <a class="button button-primary" href="#inscripcion" data-i18n="cfl_box_cta_apply">Inscribirme</a>
+          <a class="button button-ghost" href="#elegibilidad" data-i18n="cfl_box_cta_rules">Ver elegibilidad</a>
+        </div>
+      </div>
+      <div class="cfl-box-hero-art reveal" aria-hidden="true">
+        <img src="assets/cfl-box-belt.png" alt="" />
+      </div>
+    </section>
+
+    <section class="cfl-box-snapshot section reveal">
+      <div class="cfl-box-stat"><strong>126 / 135 / 147 / 160</strong><span data-i18n="cfl_box_stat_div">lb · 4 divisiones</span></div>
+      <div class="cfl-box-stat"><strong>16 + 2</strong><span data-i18n="cfl_box_stat_roster">titulares y suplentes por categoría</span></div>
+      <div class="cfl-box-stat"><strong>5</strong><span data-i18n="cfl_box_stat_events">eventos · feb–dic 2027</span></div>
+      <div class="cfl-box-stat"><strong>CFL Pro</strong><span data-i18n="cfl_box_stat_final">Gran Final en cartelera internacional</span></div>
+    </section>
+
+    <section class="cfl-box-split section" id="elegibilidad">
+      <div class="cfl-box-panel reveal">
+        <p class="eyebrow" data-i18n="cfl_box_eligible_eyebrow">Quiénes pueden aplicar</p>
+        <h2 data-i18n="cfl_box_eligible_title">Perfil de elegibilidad</h2>
+        <ul class="cfl-box-list">
+          <li data-i18n="cfl_box_eligible_1">Dominicanos residentes en República Dominicana.</li>
+          <li data-i18n="cfl_box_eligible_2">Edad entre 18 y 34 años al momento de la inscripción.</li>
+          <li data-i18n="cfl_box_eligible_3">Profesionales activos o amateurs preparados para formalizar su paso al profesionalismo.</li>
+          <li data-i18n="cfl_box_eligible_4">Disponibilidad para toda la temporada CFL 2027.</li>
+          <li data-i18n="cfl_box_eligible_5">Capacidad para competir en 126, 135, 147 o 160 lb.</li>
+        </ul>
+      </div>
+      <div class="cfl-box-panel reveal">
+        <p class="eyebrow" data-i18n="cfl_box_ineligible_eyebrow">No elegibles</p>
+        <h2 data-i18n="cfl_box_ineligible_title">Fuera de convocatoria</h2>
+        <ul class="cfl-box-list">
+          <li data-i18n="cfl_box_ineligible_1">Campeones mundiales vigentes o peleadores clasificados en WBA, WBC, IBF o WBO.</li>
+          <li data-i18n="cfl_box_ineligible_2">Atletas con contratos exclusivos incompatibles con el campeonato.</li>
+          <li data-i18n="cfl_box_ineligible_3">Boxeadores suspendidos médica o disciplinariamente.</li>
+          <li data-i18n="cfl_box_ineligible_4">Candidatos sin residencia verificable en RD.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cfl-box-timeline section">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow" data-i18n="cfl_box_timeline_eyebrow">Convocatoria</p>
+          <h2 data-i18n="cfl_box_timeline_title">Calendario de inscripción</h2>
+        </div>
+      </div>
+      <ol class="cfl-box-timeline-list reveal">
+        <li><strong data-i18n="cfl_box_tl_1_date">17 ago 2026</strong><span data-i18n="cfl_box_tl_1">Apertura de inscripciones</span></li>
+        <li><strong data-i18n="cfl_box_tl_2_date">18 sep 2026</strong><span data-i18n="cfl_box_tl_2">Cierre de inscripciones</span></li>
+        <li><strong data-i18n="cfl_box_tl_3_date">17 ago–25 sep</strong><span data-i18n="cfl_box_tl_3">Validación documental</span></li>
+        <li><strong data-i18n="cfl_box_tl_4_date">28 sep–9 oct</strong><span data-i18n="cfl_box_tl_4">Preselección</span></li>
+        <li><strong data-i18n="cfl_box_tl_5_date">17–18 oct 2026</strong><span data-i18n="cfl_box_tl_5">Evaluación presencial</span></li>
+        <li><strong data-i18n="cfl_box_tl_6_date">26 oct 2026</strong><span data-i18n="cfl_box_tl_6">Anuncio de seleccionados</span></li>
+      </ol>
+    </section>
+
+    <section class="cfl-box-season section">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow" data-i18n="cfl_box_season_eyebrow">Temporada 2027</p>
+          <h2 data-i18n="cfl_box_season_title">Cinco jornadas hasta la Gran Final</h2>
+        </div>
+        <p data-i18n="cfl_box_season_copy">Cuadros eliminatorios por división, ranking final y una Gran Final integrada a un evento internacional CFL Pro.</p>
+      </div>
+      <div class="cfl-box-season-grid reveal">
+        <article><span>01</span><h3 data-i18n="cfl_box_ev1_title">Feb 2027</h3><p data-i18n="cfl_box_ev1_copy">Primera jornada de octavos · 16 peleas</p></article>
+        <article><span>02</span><h3 data-i18n="cfl_box_ev2_title">Abr 2027</h3><p data-i18n="cfl_box_ev2_copy">Segunda jornada de octavos · 16 peleas</p></article>
+        <article><span>03</span><h3 data-i18n="cfl_box_ev3_title">Jul 2027</h3><p data-i18n="cfl_box_ev3_copy">Cuartos de final · 16 peleas</p></article>
+        <article><span>04</span><h3 data-i18n="cfl_box_ev4_title">Oct 2027</h3><p data-i18n="cfl_box_ev4_copy">Semifinales y clasificación · 16 peleas</p></article>
+        <article class="is-final"><span>05</span><h3 data-i18n="cfl_box_ev5_title">Dic 2027</h3><p data-i18n="cfl_box_ev5_copy">Gran Final dentro de CFL Pro · 16 peleas</p></article>
+      </div>
+    </section>
+
+    <section class="cfl-box-form-section section" id="inscripcion">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow" data-i18n="cfl_box_form_eyebrow">Inscripción oficial</p>
+          <h2 data-i18n="cfl_box_form_title">Formulario de convocatoria</h2>
+        </div>
+        <p data-i18n="cfl_box_form_copy">Completa tu solicitud para evaluación. La inscripción no garantiza selección: CFL elegirá 16 titulares y 2 suplentes por división.</p>
+      </div>
+
+      <div class="cfl-box-notice reveal" data-i18n="cfl_box_form_notice">La inscripción no garantiza selección. CFL elegirá 16 titulares y 2 suplentes por división luego de validar elegibilidad, trayectoria, condición médica, disponibilidad y situación contractual.</div>
+      <p class="cfl-box-demo-note reveal" data-i18n="cfl_box_form_demo">Los datos se envían a la hoja de inscripción CFL. Las fotos y documentos se registran solo como nombre de archivo por ahora; usa el enlace de video para material audiovisual.</p>
+
+      <form class="cfl-box-form reveal" id="cflBoxForm" action="#" method="post" enctype="multipart/form-data" novalidate>
+        <fieldset>
+          <legend data-i18n="cfl_box_fs_personal">1. Datos personales</legend>
+          <div class="cfl-box-grid">
+            <label><span data-i18n="cfl_box_f_nombre">Nombre completo</span> <em>*</em>
+              <input name="nombre_completo" type="text" autocomplete="name" required />
+            </label>
+            <label><span data-i18n="cfl_box_f_nombre_deportivo">Nombre deportivo</span>
+              <input name="nombre_deportivo" type="text" />
+            </label>
+            <label><span data-i18n="cfl_box_f_documento">Cédula o pasaporte dominicano</span> <em>*</em>
+              <input name="documento_identidad" type="text" required />
+            </label>
+            <label><span data-i18n="cfl_box_f_nacimiento">Fecha de nacimiento</span> <em>*</em>
+              <input name="fecha_nacimiento" type="date" required />
+              <small data-i18n="cfl_box_f_nacimiento_help">Debe tener entre 18 y 34 años al momento de la inscripción.</small>
+            </label>
+            <label><span data-i18n="cfl_box_f_telefono">Teléfono / WhatsApp</span> <em>*</em>
+              <input name="telefono" type="tel" autocomplete="tel" required />
+            </label>
+            <label><span data-i18n="cfl_box_f_email">Correo electrónico</span> <em>*</em>
+              <input name="correo_electronico" type="email" autocomplete="email" required />
+            </label>
+            <label><span data-i18n="cfl_box_f_provincia">Provincia de residencia</span> <em>*</em>
+              <input name="provincia_residencia" type="text" required />
+            </label>
+            <label><span data-i18n="cfl_box_f_direccion">Dirección de residencia</span> <em>*</em>
+              <input name="direccion_residencia" type="text" autocomplete="street-address" required />
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend data-i18n="cfl_box_fs_sport">2. Perfil deportivo</legend>
+          <div class="cfl-box-grid">
+            <div class="cfl-box-full">
+              <span class="cfl-box-label" data-i18n="cfl_box_f_condicion">Condición actual</span> <em>*</em>
+              <div class="cfl-box-choices">
+                <label class="cfl-box-choice"><input type="radio" name="condicion_boxeador" value="profesional" required /> <span data-i18n="cfl_box_f_pro">Profesional</span></label>
+                <label class="cfl-box-choice"><input type="radio" name="condicion_boxeador" value="amateur_transicion" required /> <span data-i18n="cfl_box_f_amateur">Amateur interesado en pasar a profesional</span></label>
+              </div>
+            </div>
+            <label><span data-i18n="cfl_box_f_division">División solicitada</span> <em>*</em>
+              <select name="division_solicitada" required>
+                <option value="" data-i18n="cfl_box_opt_select">Seleccione</option>
+                <option value="pluma_126" data-i18n="cfl_box_opt_pluma">Peso pluma - 126 lb</option>
+                <option value="ligero_135" data-i18n="cfl_box_opt_ligero">Peso ligero - 135 lb</option>
+                <option value="welter_147" data-i18n="cfl_box_opt_welter">Peso wélter - 147 lb</option>
+                <option value="mediano_160" data-i18n="cfl_box_opt_mediano">Peso mediano - 160 lb</option>
+              </select>
+            </label>
+            <label><span data-i18n="cfl_box_f_peso">Peso actual (lb)</span> <em>*</em>
+              <input name="peso_actual_lb" type="number" min="100" max="220" step="0.1" required />
+            </label>
+            <label><span data-i18n="cfl_box_f_estatura">Estatura</span>
+              <input name="estatura" type="text" data-i18n-placeholder="cfl_box_ph_estatura" placeholder="Ej.: 5'9&quot; / 175 cm" />
+            </label>
+            <label><span data-i18n="cfl_box_f_guardia">Guardia</span>
+              <select name="guardia">
+                <option value="" data-i18n="cfl_box_opt_select">Seleccione</option>
+                <option value="derecha" data-i18n="cfl_box_opt_orthodox">Derecha / Ortodoxa</option>
+                <option value="zurda" data-i18n="cfl_box_opt_southpaw">Zurda</option>
+                <option value="cambiante" data-i18n="cfl_box_opt_switch">Cambiante</option>
+              </select>
+            </label>
+            <label><span data-i18n="cfl_box_f_gimnasio">Gimnasio</span> <em>*</em>
+              <input name="gimnasio" type="text" required />
+            </label>
+            <label><span data-i18n="cfl_box_f_entrenador">Entrenador principal</span> <em>*</em>
+              <input name="entrenador_principal" type="text" required />
+            </label>
+            <label><span data-i18n="cfl_box_f_manager">Manager o representante</span>
+              <input name="manager_representante" type="text" />
+            </label>
+            <label><span data-i18n="cfl_box_f_promotor">Promotor actual</span>
+              <input name="promotor_actual" type="text" />
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend data-i18n="cfl_box_fs_record">3. Récord e historial competitivo</legend>
+          <div class="cfl-box-grid cfl-box-grid-3">
+            <label><span data-i18n="cfl_box_f_wins">Victorias</span> <em>*</em>
+              <input name="victorias" type="number" min="0" required />
+            </label>
+            <label><span data-i18n="cfl_box_f_losses">Derrotas</span> <em>*</em>
+              <input name="derrotas" type="number" min="0" required />
+            </label>
+            <label><span data-i18n="cfl_box_f_draws">Empates</span> <em>*</em>
+              <input name="empates" type="number" min="0" required />
+            </label>
+            <label><span data-i18n="cfl_box_f_kos">Victorias por KO</span> <em>*</em>
+              <input name="kos" type="number" min="0" required />
+            </label>
+            <label><span data-i18n="cfl_box_f_boxrec">Enlace o ID de BoxRec</span>
+              <input name="boxrec" type="text" placeholder="https://boxrec.com/..." />
+            </label>
+            <label><span data-i18n="cfl_box_f_last_fight">Fecha de última pelea</span> <em>*</em>
+              <input name="fecha_ultima_pelea" type="date" required />
+            </label>
+            <label class="cfl-box-full"><span data-i18n="cfl_box_f_amateur_hist">Récord amateur, torneos y logros relevantes</span> <em>*</em>
+              <textarea name="historial_amateur" data-i18n-placeholder="cfl_box_ph_amateur" placeholder="Complete si es amateur o si tiene experiencia amateur relevante." required></textarea>
+            </label>
+            <label class="cfl-box-full"><span data-i18n="cfl_box_f_comp_hist">Principales peleas, rivales, títulos o reconocimientos</span> <em>*</em>
+              <textarea name="historial_competitivo" required></textarea>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend data-i18n="cfl_box_fs_contract">4. Situación contractual y elegibilidad</legend>
+          <div class="cfl-box-grid">
+            <label><span data-i18n="cfl_box_f_exclusive">¿Tiene contrato promocional exclusivo?</span> <em>*</em>
+              <select name="contrato_exclusivo" required>
+                <option value="" data-i18n="cfl_box_opt_select">Seleccione</option>
+                <option value="no" data-i18n="cfl_box_opt_no">No</option>
+                <option value="si" data-i18n="cfl_box_opt_yes">Sí</option>
+                <option value="no_se" data-i18n="cfl_box_opt_unsure">No estoy seguro</option>
+              </select>
+            </label>
+            <label><span data-i18n="cfl_box_f_ranked">¿Está clasificado actualmente por WBA, WBC, IBF o WBO?</span> <em>*</em>
+              <select name="ranking_sancionador" required>
+                <option value="" data-i18n="cfl_box_opt_select">Seleccione</option>
+                <option value="no" data-i18n="cfl_box_opt_no">No</option>
+                <option value="si" data-i18n="cfl_box_opt_yes">Sí</option>
+                <option value="no_se" data-i18n="cfl_box_opt_unsure">No estoy seguro</option>
+              </select>
+            </label>
+            <label class="cfl-box-full"><span data-i18n="cfl_box_f_contract_detail">Explique su situación contractual o representación actual</span>
+              <textarea name="detalle_situacion_contractual"></textarea>
+            </label>
+            <label><span data-i18n="cfl_box_f_suspension">¿Tiene alguna suspensión médica o disciplinaria vigente?</span> <em>*</em>
+              <select name="suspension_vigente" required>
+                <option value="" data-i18n="cfl_box_opt_select">Seleccione</option>
+                <option value="no" data-i18n="cfl_box_opt_no">No</option>
+                <option value="si" data-i18n="cfl_box_opt_yes">Sí</option>
+              </select>
+            </label>
+            <label><span data-i18n="cfl_box_f_availability">¿Está disponible para toda la temporada 2027?</span> <em>*</em>
+              <select name="disponibilidad_temporada" required>
+                <option value="" data-i18n="cfl_box_opt_select">Seleccione</option>
+                <option value="si" data-i18n="cfl_box_opt_yes">Sí</option>
+                <option value="no" data-i18n="cfl_box_opt_no">No</option>
+                <option value="parcial" data-i18n="cfl_box_opt_partial">Parcialmente</option>
+              </select>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend data-i18n="cfl_box_fs_medical">5. Información médica</legend>
+          <div class="cfl-box-grid">
+            <label><span data-i18n="cfl_box_f_injuries">Lesiones recientes</span><textarea name="lesiones_recientes"></textarea></label>
+            <label><span data-i18n="cfl_box_f_surgery">Cirugías o condiciones médicas relevantes</span><textarea name="cirugias_condiciones"></textarea></label>
+            <label class="cfl-box-choice cfl-box-full">
+              <input type="checkbox" name="acepta_evaluacion_medica" required />
+              <span data-i18n="cfl_box_f_med_consent">Acepto someterme a evaluaciones médicas y físicas requeridas por CFL y la autoridad reguladora.</span> <em>*</em>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend data-i18n="cfl_box_fs_files">6. Archivos y enlaces</legend>
+          <div class="cfl-box-grid">
+            <label><span data-i18n="cfl_box_f_photo">Fotografía deportiva</span> <em>*</em>
+              <input name="foto_deportiva" type="file" accept="image/jpeg,image/png,image/webp" required />
+            </label>
+            <label><span data-i18n="cfl_box_f_id_file">Cédula o pasaporte</span> <em>*</em>
+              <input name="archivo_documento" type="file" accept="image/jpeg,image/png,application/pdf" required />
+            </label>
+            <label><span data-i18n="cfl_box_f_license">Licencia profesional, si aplica</span>
+              <input name="licencia_profesional" type="file" accept="image/jpeg,image/png,application/pdf" />
+            </label>
+            <label><span data-i18n="cfl_box_f_video">Enlace a video de pelea o sparring reciente</span>
+              <input name="video_pelea" type="url" data-i18n-placeholder="cfl_box_ph_video" placeholder="YouTube, Vimeo, Drive u otro" />
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend data-i18n="cfl_box_fs_consent">7. Declaraciones y autorizaciones</legend>
+          <div class="cfl-box-consent">
+            <label class="cfl-box-choice"><input type="checkbox" name="declara_veracidad" required /> <span data-i18n="cfl_box_f_truth">Declaro que toda la información suministrada es verdadera y autorizo a CFL a verificarla.</span> <em>*</em></label>
+            <label class="cfl-box-choice"><input type="checkbox" name="acepta_reglamento" required /> <span data-i18n="cfl_box_f_rules">Acepto cumplir el reglamento, calendario, pesajes, evaluaciones y obligaciones promocionales de CFL.</span> <em>*</em></label>
+            <label class="cfl-box-choice"><input type="checkbox" name="autoriza_imagen" required /> <span data-i18n="cfl_box_f_image">Autorizo el uso de mi nombre, imagen, voz, fotografías y material audiovisual para evaluación, promoción y transmisión del campeonato.</span> <em>*</em></label>
+            <label class="cfl-box-choice"><input type="checkbox" name="autoriza_datos" required /> <span data-i18n="cfl_box_f_data">Autorizo el tratamiento de mis datos para fines relacionados con esta convocatoria y el campeonato.</span> <em>*</em></label>
+          </div>
+        </fieldset>
+
+        <div class="cfl-box-submit">
+          <div>
+            <strong data-i18n="cfl_box_review">Revise toda la información antes de enviar.</strong>
+            <p class="cfl-box-status" data-form-status data-i18n="cfl_box_required_note">Los campos marcados con * son obligatorios.</p>
+          </div>
+          <button class="button button-primary" type="submit" data-i18n="cfl_box_submit">Enviar inscripción</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img src="assets/cfl-logo-white.png" alt="Continental Fight League" />
+      <p data-i18n="footer_tagline">Boxeo. MMA. Cultura. República Dominicana.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/cfldr" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-nav">
+      <div>
+        <h2 data-i18n="footer_explore">Explora</h2>
+        <a href="index.html#evento" data-i18n="nav_events">Eventos</a>
+        <a href="index.html#talento" data-i18n="nav_fighters">Atletas</a>
+        <a href="cfl-box.html" data-i18n="nav_cfl_box">CFL Box</a>
+        <a href="index.html#noticias" data-i18n="nav_news">Noticias</a>
+        <a href="index.html#partners" data-i18n="nav_partners">Partners</a>
+      </div>
+      <div>
+        <h2>CFL</h2>
+        <a href="index.html#nosotros" data-i18n="nav_about">Nosotros</a>
+        <a href="tickets.html" data-i18n="nav_tickets">Boletos</a>
+        <a href="https://www.instagram.com/cfldr" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Continental Fight League</span>
+      <a href="#top" data-i18n="back_top">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="cfl-box.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
