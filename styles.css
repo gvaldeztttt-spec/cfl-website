@@ -383,6 +383,7 @@ button { color: inherit; }
  align-items: center;
  gap: clamp(3rem, 9vw, 10rem);
  padding-inline: max(clamp(1.25rem, 4vw, 4rem), calc((100vw - var(--max)) / 2 + 4rem));
+ padding-inline-end: max(clamp(2.5rem, 6vw, 5.5rem), calc((100vw - var(--max)) / 2 + 5.5rem));
  overflow: hidden;
  background: var(--gold);
  color: #070707;
@@ -390,8 +391,23 @@ button { color: inherit; }
 .brand-story-copy { max-width: 700px; }
 .brand-story .eyebrow { color: #050505; opacity: .7; }
 .brand-story-copy p:not(.eyebrow) { max-width: 650px; margin: 2rem 0; font-size: 1.1rem; }
-.brand-story-art { position: relative; height: 720px; width: min(100%, 520px); justify-self: center; z-index: 2; }
-.brand-story-art img { width: 100%; height: 100%; object-fit: cover; box-shadow: 0 35px 75px rgba(0,0,0,.32); transform: rotate(2deg); }
+.brand-story-art {
+  position: relative;
+  width: min(100%, 420px);
+  justify-self: center;
+  z-index: 2;
+  padding: 1.25rem 2rem 1.25rem 1rem;
+  box-sizing: content-box;
+}
+.brand-story-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 35px 75px rgba(0,0,0,.32);
+  transform: rotate(2deg);
+  transform-origin: center center;
+}
 .brand-story-word {
  position: absolute;
  left: 0;
@@ -1218,8 +1234,7 @@ a.partner-card:hover {
  .fighter-card-large, .media-item-wide { grid-column: auto; grid-row: auto; min-height: 360px; }
  .fighter-card { min-height: 320px; }
  .brand-story { grid-template-columns: 1fr; padding-block: 5rem; }
- .brand-story-art { height: auto; width: min(78vw, 480px); }
- .brand-story-art img { height: auto; }
+ .brand-story-art { height: auto; width: min(72vw, 400px); }
  .news-row a { grid-template-columns: 110px 1fr; }
  .media-item-wide, .media-item { min-height: 420px; }
  .signup-form { grid-template-columns: 1fr; }
@@ -1250,7 +1265,7 @@ a.partner-card:hover {
  .button { min-height: 48px; padding-inline: 1rem; }
  .hero-countdown strong, .event-card-countdown strong { font-size: 1.45rem; }
  .hero-countdown div, .event-card-countdown div { min-width: 44px; }
- .brand-story-art { width: 88vw; }
+ .brand-story-art { width: min(78vw, 360px); }
  .fighter-grid { grid-template-columns: 1fr; }
  .fighter-card, .fighter-card-large { min-height: 300px; }
  .footer-bottom { flex-direction: column; }
