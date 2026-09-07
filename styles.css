@@ -645,11 +645,23 @@ a.partner-card:hover {
 }
 .fighter-profile-tag {
   margin: .35rem 0 0;
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
   color: var(--gold);
   font-weight: 800;
   letter-spacing: .08em;
   text-transform: none;
   font-size: .85rem;
+}
+.fighter-flag {
+  display: inline-block;
+  width: 22px;
+  height: 15px;
+  object-fit: cover;
+  flex: 0 0 auto;
+  border: 1px solid rgba(255,255,255,.28);
+  box-shadow: 0 2px 8px rgba(0,0,0,.35);
 }
 .fighter-profile-body h1 {
   margin: .55rem 0 0;

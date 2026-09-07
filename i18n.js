@@ -69,6 +69,7 @@ const CFL_I18N = {
     fighter_thomas: "Boxeo · Canadá",
     fighter_vincent: "MMA · República Dominicana",
     fighter_yancarlos: "Boxeo · República Dominicana",
+    fighter_miguel: "Boxeo · República Dominicana",
     fighter_branny: "MMA · República Dominicana",
     fighter_delffy: "MMA · República Dominicana",
     brand_eyebrow: "CFL Santo Domingo Premiere",
@@ -343,6 +344,7 @@ const CFL_I18N = {
     fighter_thomas: "Boxing · Canada",
     fighter_vincent: "MMA · Dominican Republic",
     fighter_yancarlos: "Boxing · Dominican Republic",
+    fighter_miguel: "Boxing · Dominican Republic",
     fighter_branny: "MMA · Dominican Republic",
     fighter_delffy: "MMA · Dominican Republic",
     brand_eyebrow: "CFL Santo Domingo Premiere",
@@ -588,7 +590,8 @@ window.CFL_applyLang = (lang) => {
   const meta = document.querySelector('meta[name="description"]');
   const isTickets = document.body.classList.contains("page-tickets");
   const isCflBox = document.body.classList.contains("page-cfl-box");
-  if (meta) {
+  const isFighter = document.body.classList.contains("page-fighter");
+  if (meta && !isFighter) {
     const metaKey = isTickets
       ? "meta_description_tickets"
       : isCflBox
@@ -596,8 +599,10 @@ window.CFL_applyLang = (lang) => {
         : "meta_description";
     meta.setAttribute("content", dict[metaKey]);
   }
-  const titleKey = isTickets ? "title_tickets" : isCflBox ? "title_cfl_box" : "title_home";
-  document.title = dict[titleKey];
+  if (!isFighter) {
+    const titleKey = isTickets ? "title_tickets" : isCflBox ? "title_cfl_box" : "title_home";
+    document.title = dict[titleKey];
+  }
 
   document.querySelectorAll("[data-lang]").forEach((btn) => {
     btn.classList.toggle("is-active", btn.getAttribute("data-lang") === lang);

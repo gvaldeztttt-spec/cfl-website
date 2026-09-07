@@ -45,8 +45,17 @@
     const recordBadge = document.querySelector("[data-fighter-record]");
     if (recordBadge) recordBadge.textContent = fighter.record;
 
+    const country = pick(fighter.country);
+    const countryCode = String(fighter.countryCode || "").toLowerCase();
+    const flagSrc = countryCode ? `assets/flags/${countryCode}.svg` : "";
+
     const tag = document.querySelector("[data-fighter-tag]");
-    if (tag) tag.textContent = `${pick(fighter.sport)} · ${pick(fighter.country)}`;
+    if (tag) {
+      const flag = flagSrc
+        ? `<img class="fighter-flag" src="${flagSrc}" alt="" width="22" height="15" />`
+        : "";
+      tag.innerHTML = `${flag}<span>${pick(fighter.sport)} · ${country}</span>`;
+    }
 
     const name = document.querySelector("[data-fighter-name]");
     if (name) name.textContent = fighter.name;
