@@ -138,6 +138,7 @@ button { color: inherit; }
  transition: opacity .85s ease, visibility .85s ease, transform 6s ease;
 }
 .hero-slide.is-active { opacity: 1; visibility: visible; transform: scale(1); }
+.hero-slide-premiere { background-position: center 38%; }
 .hero-shade {
  position: absolute;
  inset: 0;
@@ -1235,6 +1236,7 @@ a.partner-card:hover {
  .header-cta { display: none; }
  .hero { min-height: 860px; }
  .hero-slide { background-position: 58% center; }
+ .hero-slide-premiere { background-position: center 35%; }
  .hero-shade { background: linear-gradient(0deg, rgba(0,0,0,.95) 0%, rgba(0,0,0,.75) 42%, rgba(0,0,0,.15) 76%); }
  .hero-content { left: 1.25rem; right: 1.25rem; bottom: 10.5rem; width: auto; }
  .hero h1, .hero h2 { font-size: clamp(3.3rem, 15vw, 5.5rem); }
