@@ -218,6 +218,38 @@ window.CFL_FIGHTERS = {
     ],
   },
 
+  "andrew-whitney": {
+    id: "andrew-whitney",
+    name: "Andrew “The Beast” Whitney",
+    namePlain: "Andrew Whitney",
+    nickname: "The Beast",
+    sport: { es: "MMA", en: "MMA" },
+    country: { es: "Estados Unidos", en: "United States" },
+    countryCode: "us",
+    based: { es: "Springfield, Missouri", en: "Springfield, Missouri" },
+    image: "assets/andrew-whitney.jpg?v=1",
+    record: "16-11-0",
+    division: { es: "Peso gallo", en: "Bantamweight" },
+    height: "5′7″ / 171 cm",
+    reach: "66″ / 168 cm",
+    stance: { es: "Ortodoxo", en: "Orthodox" },
+    koRate: "44%",
+    debut: "2009",
+    sourceLabel: "Tapology",
+    sourceUrl: "https://www.tapology.com/fightcenter/fighters/17502-andrew-whitney",
+    bio: {
+      es: "Veterano estadounidense de peso gallo, conocido como “The Beast”. Ha competido en Titan FC y Combate Global, con base en Springfield, Missouri.",
+      en: "American bantamweight veteran known as “The Beast.” A Titan FC and Combate Global competitor based in Springfield, Missouri.",
+    },
+    recent: [
+      { result: "L", opponent: "Carlos Briseño", event: "Combate Global", date: "2022-07-01", method: "Decision · R3" },
+      { result: "L", opponent: "Martín Bravo", event: "Combate Global", date: "2021-09-17", method: "TKO · R1" },
+      { result: "L", opponent: "Ali AlQaisi", event: "Titan FC 71", date: "2021-08-06", method: "Decision · R5" },
+      { result: "L", opponent: "Jason Soares", event: "Titan FC 56", date: "2019-08-23", method: "Submission · R2" },
+      { result: "L", opponent: "Steve Garcia", event: "Jackson-Wink Fight Night 5", date: "2019-05-10", method: "TKO · R1" },
+    ],
+  },
+
   "miguel-arias": {
     id: "miguel-arias",
     name: "Miguel Angel “Brazo” Arias",
