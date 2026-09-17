@@ -739,6 +739,7 @@ a.partner-card:hover {
 }
 .fighter-fight-result.is-w { color: var(--gold-bright); }
 .fighter-fight-result.is-l { color: #c45b5b; }
+.fighter-fight-result.is-d { color: #d4b56a; }
 .fighter-fight-result.is-nc { color: var(--muted); }
 .fighter-fight-copy h3 {
   margin: 0;
