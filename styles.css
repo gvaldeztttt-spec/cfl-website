@@ -328,6 +328,39 @@ button { color: inherit; }
 .event-card-countdown span { margin-top: .3rem; color: var(--muted); font-size: .58rem; letter-spacing: .04em; }
 .event-actions { display: flex; flex-wrap: wrap; gap: .9rem; align-items: center; margin-top: .5rem; }
 
+.broadcast-lockup {
+  display: grid;
+  justify-items: start;
+  align-content: start;
+  gap: .4rem;
+  width: max-content;
+  max-width: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+.broadcast-lockup span {
+  margin: 0;
+  color: var(--muted);
+  letter-spacing: .18em;
+  font-size: .62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.broadcast-lockup img {
+  display: block;
+  width: min(210px, 56vw);
+  height: auto;
+}
+.broadcast-lockup-center { justify-items: center; margin-inline: auto; }
+.broadcast-bar {
+  max-width: none;
+  padding: 2.4rem clamp(1.25rem, 4vw, 4rem);
+  background: #050505;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.event-card-body .broadcast-lockup { margin-top: .15rem; }
+
 .roster {
  background: #0b0b0c;
  max-width: none;
@@ -591,6 +624,7 @@ a.partner-card:hover {
  font-weight: 800;
 }
 .tickets-meta dd { margin: 0; font-weight: 800; }
+.tickets-panel .broadcast-lockup { margin: 0 0 1.5rem; }
 .tickets-countdown {
  position: static;
  width: 100%;
