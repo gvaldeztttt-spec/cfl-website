@@ -95,38 +95,6 @@ window.CFL_FIGHTERS = {
     ],
   },
 
-  "yancarlos-perez": {
-    id: "yancarlos-perez",
-    name: "Yancarlos Perez",
-    namePlain: "Yancarlos Perez",
-    nickname: "",
-    sport: { es: "Boxeo", en: "Boxing" },
-    country: { es: "República Dominicana", en: "Dominican Republic" },
-    countryCode: "do",
-    based: { es: "Santo Domingo, República Dominicana", en: "Santo Domingo, Dominican Republic" },
-    image: "assets/yancarlos-perez.png?v=6",
-    record: "8-1-1",
-    division: { es: "Súper gallo", en: "Super bantamweight" },
-    height: "5′6″ / 168 cm",
-    reach: "—",
-    stance: { es: "Ortodoxo", en: "Orthodox" },
-    koRate: "63%",
-    debut: "2024-06-28",
-    sourceLabel: "BoxRec",
-    sourceUrl: "https://boxrec.com/en/box-pro/1081310",
-    bio: {
-      es: "Boxeador dominicano de Villa Mella con debut profesional en 2024. Cartelera activa entre Santo Domingo y Estados Unidos, y parte del talento local CFL.",
-      en: "Dominican boxer from Villa Mella who turned pro in 2024. Active between Santo Domingo and the U.S., and part of CFL’s local talent pipeline.",
-    },
-    recent: [
-      { result: "D", opponent: "Juan Alcantara Sanchez", event: "Dominican Fight Night, Coliseo Carlos Teo Cruz", date: "2026-09-11", method: "Draw · R8" },
-      { result: "W", opponent: "Carlos Alberto Santana Parra", event: "Coliseo Carlos Teo Cruz", date: "2025-12", method: "Win" },
-      { result: "W", opponent: "Gregorio Lebron", event: "Revere, Massachusetts", date: "2025-11", method: "Win" },
-      { result: "L", opponent: "Rajon Chance", event: "White Plains, New York", date: "2025-06", method: "Loss" },
-      { result: "W", opponent: "Merlito Sabillo", event: "Pueblo, Colorado", date: "2025-05", method: "Win" },
-    ],
-  },
-
   "branny-rosario": {
     id: "branny-rosario",
     name: "Branny Rosario",
