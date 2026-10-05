@@ -139,7 +139,10 @@ button { color: inherit; }
 }
 .hero-slide.is-active { opacity: 1; visibility: visible; transform: scale(1); }
 .hero-slide-premiere { background-position: center 38%; }
-.hero-slide-fightcard { background-position: center center; }
+.hero-slide-fightcard {
+  background-image: none;
+  background-color: #050505;
+}
 .hero-shade {
  position: absolute;
  inset: 0;
@@ -864,6 +867,9 @@ a.partner-card:hover {
 }
 .footer-brand img { width: 220px; }
 .footer-brand p { color: var(--muted); }
+.footer-contact { margin: 1rem 0 0; display: grid; gap: .3rem; }
+.footer-contact span { color: var(--gold); letter-spacing: .04em; font-size: .68rem; font-weight: 800; }
+.footer-contact a { color: #fff; font-weight: 700; overflow-wrap: anywhere; }
 .footer-social { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.25rem; }
 .footer-social a {
  
@@ -1274,7 +1280,6 @@ a.partner-card:hover {
  .hero { min-height: 860px; }
  .hero-slide { background-position: 58% center; }
  .hero-slide-premiere { background-position: center 35%; }
- .hero-slide-fightcard { background-position: center center; }
  .hero-shade { background: linear-gradient(0deg, rgba(0,0,0,.95) 0%, rgba(0,0,0,.75) 42%, rgba(0,0,0,.15) 76%); }
  .hero-content { left: 1.25rem; right: 1.25rem; bottom: 10.5rem; width: auto; }
  .hero h1, .hero h2 { font-size: clamp(3.3rem, 15vw, 5.5rem); }

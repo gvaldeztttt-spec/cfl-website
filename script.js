@@ -110,16 +110,11 @@
   document.querySelectorAll('.signup-form').forEach((form) => {
     form.addEventListener('submit', (event) => {
       event.preventDefault();
-      const button = event.currentTarget.querySelector('button');
-      const original = button.innerHTML;
-      button.textContent = t('signup_success');
-      button.disabled = true;
-      setTimeout(() => {
-        button.innerHTML = original;
-        button.disabled = false;
-        event.currentTarget.reset();
-        window.CFL_applyLang?.(window.CFL_getLang?.() || 'en');
-      }, 2600);
+      const data = new FormData(form);
+      const name = String(data.get('name') || '').trim();
+      const email = String(data.get('email') || '').trim();
+      const body = `${t('name')}: ${name}\n${t('email')}: ${email}`;
+      window.location.href = `mailto:info@continentalfightleague.com?subject=${encodeURIComponent(t('signup_mail_subject'))}&body=${encodeURIComponent(body)}`;
     });
   });
 })();
