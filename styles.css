@@ -555,6 +555,10 @@ button { color: inherit; }
   margin-inline: auto;
   object-fit: contain;
 }
+.partner-card-logo img.partner-logo-dave {
+  width: min(100%, 148px);
+  max-height: 148px;
+}
 .partner-card span {
   color: var(--muted);
   letter-spacing: .04em;
