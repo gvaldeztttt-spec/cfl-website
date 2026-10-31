@@ -468,8 +468,9 @@ button { color: inherit; }
 .news-feature img {
  width: 100%;
  aspect-ratio: 4/5;
- object-fit: cover;
+ object-fit: contain;
  object-position: center center;
+ background: #050505;
  filter: saturate(.85);
  transition: transform .55s ease, filter .3s ease;
 }
@@ -530,10 +531,10 @@ button { color: inherit; }
 }
 .partners .section-heading { margin-bottom: 2.5rem; }
 .partners-row {
-  max-width: 1100px;
+  max-width: 1360px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 1rem;
 }
 .partner-card {
@@ -1245,6 +1246,11 @@ a.partner-card:hover {
  .news-layout { grid-template-columns: 1fr; }
  .signup { grid-template-columns: 1fr; }
  .partners-row { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 720px; }
+ .partners-row .partner-card:last-child:nth-child(odd) {
+   grid-column: 1 / -1;
+   width: calc((100% - 1rem) / 2);
+   justify-self: center;
+ }
 }
 
 @media (max-width: 820px) {
@@ -1310,8 +1316,24 @@ a.partner-card:hover {
    grid-column: 2;
    text-align: left;
  }
+ .cfl-box-hero,
+ .cfl-box-promo { grid-template-columns: 1fr; }
+ .cfl-box-hero-art,
+ .cfl-box-promo-art { min-height: 240px; }
+ .cfl-box-promo-art::after { background: linear-gradient(0deg, #070707, transparent 40%); }
+ .cfl-box-snapshot { grid-template-columns: 1fr 1fr; }
+ .cfl-box-split,
+ .cfl-box-timeline-list { grid-template-columns: 1fr; }
+ .cfl-box-season-grid { grid-template-columns: 1fr 1fr; }
+ .cfl-box-grid,
+ .cfl-box-grid-3 { grid-template-columns: 1fr; }
  .site-footer { grid-template-columns: 1fr; }
  .partners-row { grid-template-columns: 1fr; max-width: 420px; }
+ .partners-row .partner-card:last-child:nth-child(odd) {
+   grid-column: auto;
+   width: auto;
+   justify-self: stretch;
+ }
 }
 
 @media (max-width: 520px) {
