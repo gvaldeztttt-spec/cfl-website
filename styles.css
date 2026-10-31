@@ -861,6 +861,20 @@ a.partner-card:hover {
 }
 .signup-form p { grid-column: 1 / -1; margin: .2rem 0 0; color: var(--muted); font-size: .7rem; }
 
+.signup-form p.is-success { color: var(--gold-bright); }
+.signup-form p.is-error { color: #e07a7a; }
+.signup-form button:disabled { opacity: .55; cursor: wait; }
+.signup-hp {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 .site-footer {
  max-width: var(--max);
  margin: 0 auto;

@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=11" />
+  <link rel="stylesheet" href="styles.css?v=12" />
   <script>
     document.documentElement.lang = localStorage.getItem("cfl-lang") || "en";
   </script>
@@ -452,7 +452,7 @@
         <p class="eyebrow" data-i18n="signup_eyebrow">Acceso prioritario</p>
         <h2 data-i18n="signup_title">Recibe primero las noticias, boletos y anuncios de cartelera.</h2>
       </div>
-      <form class="signup-form reveal" action="#" method="post">
+      <form class="signup-form reveal" action="#" method="post" data-source="home">
         <label>
           <span class="sr-only" data-i18n="name">Nombre</span>
           <input type="text" name="name" data-i18n-placeholder="name" placeholder="Nombre" autocomplete="name" />
@@ -461,8 +461,12 @@
           <span class="sr-only" data-i18n="email">Correo electrónico</span>
           <input type="email" name="email" data-i18n-placeholder="email" placeholder="Correo electrónico" autocomplete="email" required />
         </label>
+        <label class="signup-hp" aria-hidden="true">
+          <span>Company</span>
+          <input type="text" name="company" tabindex="-1" autocomplete="off" />
+        </label>
         <button type="submit"><span data-i18n="signup_submit">Registrarme</span> <span>→</span></button>
-        <p data-i18n="signup_note">Al registrarte aceptas recibir comunicaciones de CFL. Formulario de demostración.</p>
+        <p data-signup-status data-i18n="signup_note">Boletos, eventos y noticias. Al registrarte aceptas recibir comunicaciones de CFL.</p>
       </form>
     </section>
   </main>
@@ -497,7 +501,7 @@
     </div>
   </footer>
 
-  <script src="i18n.js?v=5"></script>
-  <script src="script.js"></script>
+  <script src="i18n.js?v=6"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>

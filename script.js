@@ -107,14 +107,59 @@
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+  const COMMS_ENDPOINT =
+    'https://script.google.com/macros/s/AKfycby5D7vu8tYjYH4VY-NCwSO6ECkXnbjHX5CoXrQldo_gX-V85-Wnp2p-OvGzwOQ9cRPHbg/exec';
+
   document.querySelectorAll('.signup-form').forEach((form) => {
-    form.addEventListener('submit', (event) => {
+    form.addEventListener('submit', async (event) => {
       event.preventDefault();
       const data = new FormData(form);
-      const name = String(data.get('name') || '').trim();
+      const status = form.querySelector('[data-signup-status]');
+      const button = form.querySelector('button[type="submit"]');
+      const setStatus = (key, kind) => {
+        if (!status) return;
+        status.textContent = t(key);
+        status.classList.toggle('is-success', kind === 'success');
+        status.classList.toggle('is-error', kind === 'error');
+      };
+
+      if (String(data.get('company') || '').trim()) {
+        setStatus('signup_success', 'success');
+        return;
+      }
+
       const email = String(data.get('email') || '').trim();
-      const body = `${t('name')}: ${name}\n${t('email')}: ${email}`;
-      window.location.href = `mailto:info@continentalfightleague.com?subject=${encodeURIComponent(t('signup_mail_subject'))}&body=${encodeURIComponent(body)}`;
+      if (!form.checkValidity() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        form.reportValidity();
+        return;
+      }
+
+      if (button) button.disabled = true;
+      setStatus('signup_sending', '');
+
+      try {
+        await fetch(COMMS_ENDPOINT, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({
+            form: 'comms',
+            name: String(data.get('name') || '').trim(),
+            email,
+            lang: window.CFL_getLang?.() || document.documentElement.lang || 'en',
+            source: form.getAttribute('data-source') || 'site',
+            tickets: true,
+            events: true,
+            news: true,
+          }),
+        });
+        setStatus('signup_success', 'success');
+        form.reset();
+      } catch {
+        setStatus('signup_error', 'error');
+      } finally {
+        if (button) button.disabled = false;
+      }
     });
   });
 })();

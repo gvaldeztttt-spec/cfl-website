@@ -52,4 +52,4 @@ Domain registrar: **Squarespace Domains**.
 - [ ] Partner logos/links work
 - [ ] Tickets page loads at `/tickets.html`
 - [ ] Instagram points to [cfldr](https://www.instagram.com/cfldr)
-- [ ] Wire real email signup (Formspree / Resend) when ready
+- [x] Wire the homepage and tickets signup to the Comms tab on the championship Google Sheet. Publish a new Apps Script version from `docs/cfl-box-apps-script.js` before relying on live signups.

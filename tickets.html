@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=12" />
   <script>
     document.documentElement.lang = localStorage.getItem("cfl-lang") || "en";
   </script>
@@ -92,7 +92,7 @@
           <div><strong data-seconds>00</strong><span data-i18n="seconds">seg</span></div>
         </div>
 
-        <form class="signup-form tickets-form" action="#" method="post">
+        <form class="signup-form tickets-form" action="#" method="post" data-source="tickets">
           <label>
             <span class="sr-only" data-i18n="name">Nombre</span>
             <input type="text" name="name" data-i18n-placeholder="name" placeholder="Nombre" autocomplete="name" />
@@ -101,8 +101,12 @@
             <span class="sr-only" data-i18n="email">Correo electrónico</span>
             <input type="email" name="email" data-i18n-placeholder="email" placeholder="Correo electrónico" autocomplete="email" required />
           </label>
+          <label class="signup-hp" aria-hidden="true">
+            <span>Company</span>
+            <input type="text" name="company" tabindex="-1" autocomplete="off" />
+          </label>
           <button type="submit"><span data-i18n="tickets_notify">Avísame</span> <span>→</span></button>
-          <p data-i18n="tickets_note">Te avisaremos cuando los boletos estén disponibles. Formulario de demostración.</p>
+          <p data-signup-status data-i18n="tickets_note">Te avisaremos cuando los boletos estén disponibles.</p>
         </form>
 
         <div class="tickets-actions">
@@ -143,7 +147,7 @@
     </div>
   </footer>
 
-  <script src="i18n.js?v=4"></script>
-  <script src="script.js"></script>
+  <script src="i18n.js?v=6"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>
