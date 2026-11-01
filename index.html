@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=12" />
+  <link rel="stylesheet" href="styles.css?v=14" />
   <script>
     document.documentElement.lang = localStorage.getItem("cfl-lang") || "en";
   </script>
@@ -63,46 +63,19 @@
   <main id="main">
     <section class="hero" data-i18n-aria="hero_label" aria-label="CFL fight night">
       <div class="hero-slider" data-slider>
-        <article class="hero-slide hero-slide-premiere is-active" style="--hero-image: url('assets/cfl-arena-premiere.jpg?v=2');">
-          <div class="hero-shade"></div>
-          <div class="hero-content reveal">
-            <p class="eyebrow" data-i18n="hero1_eyebrow">Fight night countdown</p>
-            <h1 data-i18n="hero1_title">Santo Domingo premiere</h1>
-            <p class="hero-copy" data-i18n="hero1_copy">La nueva casa del combate en Latinoamérica. Boxeo, MMA y cultura dominicana en una sola noche.</p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#evento" data-i18n="hero1_cta1">Ver evento</a>
-              <a class="button button-ghost" href="#talento" data-i18n="hero1_cta2">Conoce el talento</a>
-            </div>
-          </div>
-          <div class="hero-caption" data-i18n="hero1_caption">CFL Fight Night · Arena Banreservas</div>
+        <article class="hero-slide hero-slide-poster is-active">
+          <img src="assets/hero-marca-rd.jpg?v=1" alt="Yo soy marca RD. Edwin De Los Santos, Rohan Polanco y Elvis Rodríguez. Premier CFL, 19 de diciembre, Arena Banreservas." />
+          <h1 class="sr-only" data-i18n="hero1_title">Yo soy marca RD</h1>
         </article>
 
-        <article class="hero-slide hero-slide-fightcard">
-          <div class="hero-shade"></div>
-          <div class="hero-content reveal">
-            <p class="eyebrow" data-i18n="hero2_eyebrow">El Rayo y La Granada</p>
-            <h2 data-i18n="hero2_title">El mundo pelea en Santo Domingo</h2>
-            <p class="hero-copy" data-i18n="hero2_copy">Atletas de República Dominicana, Canadá, Estados Unidos y el Caribe bajo una misma plataforma.</p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#evento" data-i18n="hero2_cta1">19 diciembre 2026</a>
-              <a class="button button-ghost" href="#registro" data-i18n="hero2_cta2">Recibe novedades</a>
-            </div>
-          </div>
-          <div class="hero-caption" data-i18n="hero2_caption">19 de diciembre · Arena Banreservas</div>
+        <article class="hero-slide hero-slide-poster">
+          <img src="assets/hero-mexico-rd.jpg?v=1" alt="México vs República Dominicana. Boxeo y MMA en una sola noche. 19 de diciembre, Arena Banreservas." />
+          <h2 class="sr-only" data-i18n="hero2_title">México vs República Dominicana</h2>
         </article>
 
-        <article class="hero-slide" style="--hero-image: url('assets/cfl-arena-mma.png');">
-          <div class="hero-shade"></div>
-          <div class="hero-content reveal">
-            <p class="eyebrow" data-i18n="hero3_eyebrow">Talento dominicano</p>
-            <h2 data-i18n="hero3_title">Una nación. Una pelea. Un solo corazón</h2>
-            <p class="hero-copy" data-i18n="hero3_copy">CFL proyecta a los atletas dominicanos y convierte la Arena Banreservas en una vitrina global.</p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#talento" data-i18n="hero3_cta1">Ver atletas</a>
-              <a class="button button-ghost" href="#nosotros" data-i18n="hero3_cta2">Nuestra visión</a>
-            </div>
-          </div>
-          <div class="hero-caption" data-i18n="hero3_caption">CFL Fight Night · MMA</div>
+        <article class="hero-slide hero-slide-poster">
+          <img src="assets/hero-viva-mexico.jpg?v=1" alt="Viva México. José González, Zeuz Vázquez y Abraham Nava. 19 de diciembre, Arena Banreservas." />
+          <h2 class="sr-only" data-i18n="hero3_title">Viva México</h2>
         </article>
       </div>
 
@@ -299,7 +272,7 @@
           </a>
 
           <a class="fighter-card" href="fighter.html?id=oscar-mata">
-            <img src="assets/oscar-mata.jpg?v=1" alt="Oscar Mata" loading="lazy" />
+            <img src="assets/oscar-mata.jpg?v=2" alt="Oscar Mata" loading="lazy" />
             <div class="fighter-overlay">
               <span data-i18n="fighter_oscar">Boxeo · México</span>
               <h3>Oscar “Terrible” Mata</h3>
@@ -312,7 +285,7 @@
         <h3 class="roster-group-title" data-i18n="roster_mma">MMA</h3>
         <div class="fighter-grid">
           <a class="fighter-card" href="fighter.html?id=ty-jhonson">
-            <img src="assets/ty-jhonson.png?v=6" alt="Ty La Pollona Jhonson" loading="lazy" />
+            <img src="assets/ty-jhonson.jpg?v=7" alt="Ty La Pollona Jhonson" loading="lazy" />
             <div class="fighter-overlay">
               <span data-i18n="fighter_ty">MMA · Estados Unidos</span>
               <h3>Ty “La Pollona” Jhonson</h3>
@@ -320,26 +293,42 @@
           </a>
 
           <a class="fighter-card" href="fighter.html?id=carlos-santana">
-            <img src="assets/carlos-santana.jpg?v=1" alt="Carlos Santana" loading="lazy" />
+            <img src="assets/carlos-santana.jpg?v=2" alt="Carlos Santana" loading="lazy" />
             <div class="fighter-overlay">
               <span data-i18n="fighter_carlos">MMA · República Dominicana</span>
               <h3>Carlos “El soldado de Dios” Santana</h3>
             </div>
           </a>
 
+          <a class="fighter-card" href="fighter.html?id=luis-rodriguez">
+            <img src="assets/luis-rodriguez.jpg?v=1" alt="Luis Rodriguez" loading="lazy" />
+            <div class="fighter-overlay">
+              <span data-i18n="fighter_luis_rodriguez">MMA · República Dominicana</span>
+              <h3>Luis “El Cañón” Rodriguez</h3>
+            </div>
+          </a>
+
           <a class="fighter-card" href="fighter.html?id=abraham-nava">
-            <img src="assets/abraham-nava.jpg?v=1" alt="Abraham Nava" loading="lazy" />
+            <img src="assets/abraham-nava.jpg?v=2" alt="Abraham Nava" loading="lazy" />
             <div class="fighter-overlay">
               <span data-i18n="fighter_abraham">MMA · México</span>
               <h3>Abraham “The Savage” Nava</h3>
             </div>
           </a>
 
-          <a class="fighter-card" href="fighter.html?id=marco-elpidio">
-            <img src="assets/marco-elpidio.jpg?v=1" alt="Marco Elpidio" loading="lazy" />
+          <a class="fighter-card" href="fighter.html?id=elias-mendez">
+            <img src="assets/elias-mendez.jpg?v=1" alt="Elias Mendez" loading="lazy" />
             <div class="fighter-overlay">
-              <span data-i18n="fighter_marco">MMA · México</span>
-              <h3>Marco “La Roca” Elpidio</h3>
+              <span data-i18n="fighter_elias">MMA · México</span>
+              <h3>Elias “Quetzal” Mendez</h3>
+            </div>
+          </a>
+
+          <a class="fighter-card" href="fighter.html?id=jose-gildardo">
+            <img src="assets/jose-gildardo.jpg?v=1" alt="Jose Gildardo Prieto" loading="lazy" />
+            <div class="fighter-overlay">
+              <span data-i18n="fighter_jose_prieto">MMA · México</span>
+              <h3>Jose “Pino” Gildardo Prieto</h3>
             </div>
           </a>
         </div>
@@ -501,7 +490,7 @@
     </div>
   </footer>
 
-  <script src="i18n.js?v=6"></script>
+  <script src="i18n.js?v=8"></script>
   <script src="script.js?v=2"></script>
 </body>
 </html>
