@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=14" />
+  <link rel="stylesheet" href="styles.css?v=15" />
   <script>
     document.documentElement.lang = localStorage.getItem("cfl-lang") || "en";
   </script>
@@ -126,7 +126,13 @@
           </div>
         </div>
         <div class="event-card-body">
-          <p class="eyebrow" data-i18n="event_eyebrow">Fight night</p>
+          <p class="eyebrow event-eyebrow">
+            <span data-i18n="event_eyebrow">Fight night</span>
+            <a class="tickets-chip" href="tickets.html" data-ticket-chip data-opens="2026-11-10T18:00:00-04:00">
+              <span class="tickets-live-dot" aria-hidden="true"></span>
+              <span data-ticket-chip-label>Tickets live</span>
+            </a>
+          </p>
           <h3 data-i18n="event_title">CFL Santo Domingo premiere</h3>
           <p class="event-venue" data-i18n="event_venue">Arena Banreservas · Santo Domingo, RD · 7:00 pm AST</p>
           <a class="broadcast-lockup" href="https://www.pxsports.com/" target="_blank" rel="noopener noreferrer">
@@ -490,7 +496,7 @@
     </div>
   </footer>
 
-  <script src="i18n.js?v=8"></script>
-  <script src="script.js?v=2"></script>
+  <script src="i18n.js?v=9"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>

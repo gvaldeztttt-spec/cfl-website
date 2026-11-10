@@ -162,4 +162,63 @@
       }
     });
   });
+
+  const dict = () => window.CFL_I18N?.[window.CFL_getLang?.() || 'en'] || {};
+
+  const sale = document.querySelector('[data-ticket-sale]');
+  const chips = [...document.querySelectorAll('[data-ticket-chip]')];
+  if (sale || chips.length) {
+    const paintSale = () => {
+      const copy = dict();
+      const opens = new Date(sale?.dataset.ticketOpens || chips[0]?.dataset.opens || '').getTime();
+      const url = (sale?.dataset.ticketUrl || '').trim();
+      const open = Boolean(url) || (Number.isFinite(opens) && Date.now() >= opens);
+      const ready = open && Boolean(url);
+
+      sale?.querySelector('[data-ticket-status]')?.classList.toggle('is-waiting', !open);
+      sale?.querySelector('[data-ticket-status]')?.classList.toggle('is-live', open);
+      const statusText = sale?.querySelector('[data-ticket-status-text]');
+      if (statusText) statusText.textContent = copy[open ? 'tickets_status_live' : 'tickets_status_waiting'] || '';
+      const blurb = sale?.querySelector('[data-ticket-copy]');
+      if (blurb) blurb.textContent = copy[open ? 'tickets_copy_live' : 'tickets_copy_waiting'] || '';
+      const saleClock = sale?.querySelector('[data-sale-clock]');
+      const fightClock = sale?.querySelector('[data-fight-clock]');
+      if (saleClock) saleClock.hidden = open;
+      if (fightClock) fightClock.hidden = !open;
+
+      const buy = sale?.querySelector('[data-ticket-buy]');
+      const label = buy?.querySelector('[data-ticket-buy-label]');
+      const note = sale?.querySelector('[data-ticket-buy-note]');
+      if (buy) {
+        if (ready) {
+          buy.href = url;
+          buy.target = '_blank';
+          buy.rel = 'noopener noreferrer';
+          buy.removeAttribute('aria-disabled');
+          if (label) label.textContent = copy.tickets_buy || 'Buy tickets';
+        } else {
+          buy.removeAttribute('href');
+          buy.removeAttribute('target');
+          buy.removeAttribute('rel');
+          buy.setAttribute('aria-disabled', 'true');
+          if (label) label.textContent = copy[open ? 'tickets_buy_pending' : 'tickets_buy_waiting'] || '';
+        }
+      }
+      if (note) {
+        note.hidden = ready;
+        note.textContent = copy[open ? 'tickets_buy_note_pending' : 'tickets_buy_note_waiting'] || '';
+      }
+
+      chips.forEach((chip) => {
+        chip.classList.toggle('is-waiting', !open);
+        chip.classList.toggle('is-live', open);
+        const chipLabel = chip.querySelector('[data-ticket-chip-label]');
+        if (chipLabel) chipLabel.textContent = copy[open ? 'tickets_status_live' : 'tickets_status_waiting'] || '';
+      });
+    };
+
+    paintSale();
+    setInterval(paintSale, 1000);
+    window.addEventListener('cfl:langchange', paintSale);
+  }
 })();
