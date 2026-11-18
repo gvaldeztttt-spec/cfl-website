@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=15" />
+  <link rel="stylesheet" href="styles.css?v=16" />
   <script>
     document.documentElement.lang = localStorage.getItem("cfl-lang") || "en";
   </script>
@@ -68,6 +68,7 @@
         <p class="tickets-live is-live" data-ticket-status>
           <span class="tickets-live-dot" aria-hidden="true"></span>
           <span data-ticket-status-text>En vivo</span>
+          <img src="assets/partner-uepa.png?v=1" alt="Uepa Tickets" />
         </p>
         <p class="eyebrow" data-i18n="tickets_eyebrow">CFL Santo Domingo premiere</p>
         <h1 data-i18n-html="tickets_title">Boletos<br /><span>en vivo</span></h1>
@@ -83,9 +84,15 @@
           </div>
         </div>
 
-        <a class="button button-primary tickets-buy" data-ticket-buy href="https://uepatickets.com/tickets/es-do/entradas-deporte-continental-fight-league-2026" target="_blank" rel="noopener noreferrer">
-          <span data-ticket-buy-label>Comprar boletos</span>
-        </a>
+        <div class="tickets-buy-row">
+          <a class="button button-primary tickets-buy" data-ticket-buy href="https://uepatickets.com/tickets/es-do/entradas-deporte-continental-fight-league-2026" target="_blank" rel="noopener noreferrer">
+            <span data-ticket-buy-label>Comprar boletos</span>
+          </a>
+          <a class="ticket-seller" href="https://uepatickets.com/tickets/es-do/entradas-deporte-continental-fight-league-2026" target="_blank" rel="noopener noreferrer">
+            <span data-i18n="tickets_seller">En venta en</span>
+            <img src="assets/partner-uepa.png?v=1" alt="Uepa Tickets" />
+          </a>
+        </div>
         <p class="tickets-buy-note" data-ticket-buy-note hidden>The purchase link will be posted here at 6:00 pm AST.</p>
 
         <dl class="tickets-meta">
@@ -169,7 +176,7 @@
     </div>
   </footer>
 
-  <script src="i18n.js?v=11"></script>
+  <script src="i18n.js?v=12"></script>
   <script src="script.js?v=4"></script>
 </body>
 </html>
